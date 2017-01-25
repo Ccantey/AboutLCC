@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>LCC-GIS</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h3 class="fragment highlight-red"><a href="http://gis.leg.mn">Legislative Coordinating Commission</a></h3>
+					<img src="capital-square.png" height="175px">
+					<h5>Maps and Apps from the State Legislature</h5>
+					<p>
+						<small>Presented by <a href="http://geo-odyssey.com/">Chris Cantey</a> / <a href="http://twitter.com/chriscantey">@chriscantey</a> / <a href="https://github.com/Ccantey">github/ccantey</a></small>
+					</p>
+					<aside class="notes">
+						Thanks for having me. Forgive me. Survey of jobs 
+					</aside>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Who Am I?</h2>
+						<p>Sr. IT Specialist</p>											
+							<img  data-src="http://i.giphy.com/vt77XPSOtZXPi.gif">
+							<aside class="notes">
+						Senators: who needs a g-i-s analyst? 
+					</aside>
+						
+					</section>
+					<section >
+						<p>Bachelor's Degree in Land Surveying & Mapping Science</p>
+						<img  data-src="scsu.jpg">
+					</section>
+
+					<section data-background="http://i.giphy.com/26h0oRBbqRnd11L6E.gif">
+						<h3>Master's Degree in Cartography & GIS</h3>
+					</section>
+				</section>
+
+				<section id="fragments">
+						<h2>Who is the LCC?</h2>
+						<p class="fragment">Non-partisan umbrella organization</p>
+						<p class="fragment">Legislative commissions</p>
+						<p class="fragment">Joint offices</p>
+						
+						<p class="fragment">GIS Office:  Lee Meilleur</p>
+						<p class="fragment">What we do... </p>
+				</section>
+
+				<section>
+					<h2>Geospatial & IT Services</h2>
+					<p class="fragment">Information Technology - MnIT </p>
+					<p class="fragment">Commission Websites</p>
+					<p class="fragment">Legacy Amendment</p>
+					<p class="fragment">Geographic Information Systems (open-source)</p>
+					<aside class="notes">
+						Not under MnIT. LCCMR, Clean Water, Pensions, Outdoor Heritage. 
+					</aside>
+					
+				</section>
+
+				<section>
+					<h2>Data</h2>
+					<p >Legislative Districts</p>
+					<p class="fragment">House of Representatives - Senate</p>
+					<p class="fragment"><a href="http://www.gis.leg.mn/hsemapdata.htm" target="_blank"> Aggregate and compile ACS - Demographic Profiles</a> </p>
+					<p class="fragment"><a href="http://www.gis.leg.mn/php/house.php?Report=HouseMCD" target="_blank"> District Report - Spatial Queries</a> </p>
+					<p class="fragment"><a href="http://www.gis.leg.mn/html/download.html" target="_blank"> Data Downloads</a> </p>
+					<p class="fragment"><a href="https://github.com/LegislativeCoordinatingCommissionGIS" target="_blank"> GitHub</a> </p>
+					<aside class="notes">
+						We are the data stewards of all legislative data. What does this data entail?
+
+					</aside>
+				</section>
+				<section>
+					<h2>Redistricting</h2>
+					<p class="fragment">Decennial</p>
+					<p class="fragment"><a href="http://www.gis.leg.mn/html/redistricting.html" target="_blank">2020</a> </p>
+					<p class="fragment"><a href="http://www.gis.leg.mn/redist2010/plans.php?plname=L2012&pltype=court" target="_blank">2012 Legislative Plans</a> </p>
+					<aside class="notes">
+						Click on State Timetable.
+						Kickoff meetings - BBSP underway
+
+					</aside>
+				</section>
+
+				<section>
+					<h2>Maps</h2>
+					<p >Paper Maps</p>
+					<p class="fragment"><a href="http://www.gis.leg.mn/pdf/elec2016/MNsenate/MNSenate16_photos.pdf" target="_blank">Photo Maps</a> </p>					
+					<p class="fragment"><a href="http://www.gis.leg.mn/pdf/bills/NewMarketsTaxCredAreas-state.pdf" target="_blank">Maps Related to Bills</a> </p>
+					<p class="fragment"><a href="http://www.gis.leg.mn/pdf/elec2016/MNsenate/MNsenate16vtd.pdf" target="_blank">Elections</a></p>
+					<aside class="notes">
+						Single/one-off maps
+					</aside>
+				</section>
+
+				<section>
+				   <h2>Maps</h2>
+					<p>Data Driven Maps | ArcPy</p>
+					<p class="fragment"><a href="http://www.gis.leg.mn/hsemapdata.htm" target="_blank">House District</a> </p>
+					<p class="fragment"><a href="DistrictMXD.jpg" target="_blank"> Data Driven Pages - ArcPy</a></p>
+					<p class="fragment">Precincts (4000+)</p>
+					<aside class="notes">
+					    Other maps are created programaticaly with Python and DDP. 134 house districts. 67 senate districts
+						52B
+					</aside>
+				</section>
+
+				<section>
+				   <h2>Maps</h2>
+					<p>Interactive Maps</p>
+					<p >
+					    <a href="http://www.gis.leg.mn/iMaps/LCCMR/landAcq/index.html" target="_blank">LCCMR</a>
+					</p>
+					<p >
+					    <a href="http://www.gis.leg.mn/iMaps/Legacy/" target="_blank">Legacy</a>
+					</p>
+					<p >
+					    <a href="http://www.gis.leg.mn/iMaps/elections/2016/all/index.html" target="_blank">Election</a>
+					</p>
+					<p >
+					    <a href="http://www.gis.leg.mn/iMaps/districts/" target="_blank">Who Represents Me?</a>
+					</p>
+					<aside class="notes">
+					    LCCMR was a prototype for Legacy.
+					    The legacy map replaced a terrible map that cost 6 figures.
+					    Leaflet with leaflet marker clusters - uses geoserver wms
+						Responsive Design.
+						On Mapbox GL - differences with Leaflet... Play with 3D
+						3d fun: http://www.gis.leg.mn/iMaps/elections/prism/
+						Election redistricting: Packing and cracking. 
+
+					</aside>
+				</section>
+
+				<section>
+					<h2>Leaflet Marker Clusters</h2>
+					<pre><code class="hljs" data-trim contenteditable>
+        // this method defines how the graduated symbol clusters are created
+        iconCreateFunction: function (cluster) {
+            // get the number of items in the cluster
+            var count = cluster.getChildCount();
+            // figure out how many digits long the number is
+            var scale;
+            // Set graduated symbol scaling
+            if (count <= 10) {scale = 1;}
+            if (count > 10 && count <= 75) {scale = 2;}
+            if (count > 75 && count <= 500) {scale = 3;}
+            if (count > 500) {scale = 4;}
+
+            return new L.divIcon({
+                html: count,
+                className:'cluster scale-' + scale,
+                iconSize: null
+            });
+        } //end iconCreateFunction method
+    }).addTo(overlays); //end clusters object
+    //add points to clusters markergroup
+    clusters.addLayer(LegacyProject);
+					</code></pre>
+					
+				</section>
+
+				
+				<section>
+					<section data-background="http://i.giphy.com/11j5OF7BTglVkc.gif" >
+						<h2>Design Matters!</h2>
+					</section>
+					<aside class="notes">
+					    Design matters - i've had employers who wanted the shiniest toys, but didn't want to pay for the time needed to make that toy.
+					</aside>
+					<section data-background="http://i.giphy.com/dbSOMCw3b9Rh6.gif">
+						<h2>Because User Experience Matters!</h2>
+					</section>
+					<section data-background="http://i.giphy.com/6JB4v4xPTAQFi.gif" data-background-size="contain">
+						<aside class="notes">
+					    And you may still say, nope - design is just lipstick.
+					</aside>
+					</section>
+					<section >
+						<h2>Google Analytics</h2>
+						<img  data-src="ga/overview.jpg" >
+						<aside class="notes">
+					    You may notice a siezemic shift in the data. Point it out. Lets take a closer look at whats going on.
+					</aside>
+					</section>
+					<!-- <section >
+						<p>Who Represents Me?</p>
+						<p><a href="http://www.gis.leg.mn/OpenLayers/districts-Dec2015/" target="_blank">Before</a></p>
+						<p><a href="http://www.gis.leg.mn/iMaps/districts/" target="_blank">After</a></p>
+					</section> -->
+					<section >
+						<p>Before & After</p>
+						<a href="ga/before.jpg" target="_blank"> <img  data-src="ga/before.jpg" width="75%"></a>
+						<a href="ga/before.jpg" target="_blank"> <img  data-src="ga/after.jpg" width="75%"></a>
+					</section>
+					
+				</section>
+
+				
+				<section >
+					<h2 >But I'm Not a _______!</h2>
+					<img  data-src="http://i.giphy.com/cOiKbCtrbXqVi.gif">
+					<h2 class="fragment">No, but you are a cartographer!</h2>
+
+					<aside class="notes">
+					    You may say, "this is great, but I'm not a ..." Check your imposter syndrome at the door.
+						Typography. Color. Visual Hierarchy. Arrangement of map elements. JND.
+						Find inspiration in others - I rip off NY Times
+					</aside>
+
+				</section>
+
+				
+
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+					<p>
+						- Questions <br>
+						- Comments
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
